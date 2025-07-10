@@ -1,8 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
-import OpenAI from 'openai';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+const OpenAI = require('openai');
 
 dotenv.config();
 
@@ -40,7 +40,6 @@ app.post('/ask', async (req, res) => {
   }
 });
 
-// ✅ FIXED: Listen on all interfaces, not just localhost
 app.listen(port, '0.0.0.0', () => {
   console.log(`✅ Ava ChatGPT server running on port ${port}`);
 });
